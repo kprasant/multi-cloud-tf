@@ -25,9 +25,6 @@ resource "google_container_cluster" "primary" {
   remove_default_node_pool = true
   initial_node_count       = 1
 
-#  network    = google_compute_network.vpc.name
-#  subnetwork = google_compute_subnetwork.subnet.name
-
   master_auth {
     username = var.gke_username
     password = var.gke_password
